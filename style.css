@@ -1,0 +1,16 @@
+#name {
+	font-size: 300%;
+}
+
+#summary {
+  background-color: red;
+  font-family: courier;
+}
+
+body {
+	text-align: center;
+}
+ul{ text-align:center;}
+li {
+	text-align:center;
+}
