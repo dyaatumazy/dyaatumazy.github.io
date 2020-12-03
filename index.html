@@ -7,8 +7,13 @@
 <title> Dyaa Ashraf Tumazy </title>
 </head>
 <body>
+<div id="wrapper">
+  <div id="container">
+    <div><input id="button" type="button" value=" Print my CV "onClick="window.print()" ></div>
+  </div>
+</div>
 <h1> Summarizing myself </h1>
-<h1 id="name"> Dyaa Ashraf Tumazy </h1>
+<h1 id="name" onClick = "alert()"> Dyaa Ashraf Tumazy </h1>
 <p id= "summary"> I`m Dyaa Tumazy from Hebron, i succeedat Tawjihi in the scientific stream <br>
 and i`ve registered at NNU, NIS specialization,i`ve perfectly finished my first year <br>
 and now im in my second year </p>
@@ -16,7 +21,7 @@ and now im in my second year </p>
 <img src = " me.jpg " alt = " Me setting on my car " width = "250" height = "250">
 <p> I`ve taken some free online courses in my field,<br>
  and here i would like to show you some of my education background :  </p>
-<dl>
+<dl id="JS" onmouseover="ClrRed(this)" onmouseout="ClrNor(this)">
 <dt> HTML and CSS for Beginners course </dt>
 <dt> Ethical hacking | Metasploit tutorial course </dt>
 <dt> Linux for beginners course </dt>
@@ -37,5 +42,17 @@ that i`ve done as a self work experience at home :</p>
 <dt> Coding </dt>
 <dt> writing </dt>
 </dl>
+<script>
+function ClrRed(x) {
+x.style.color = "red";
+}
+function ClrNor(x) {
+x.style.color = "black";
+}
+
+function alert() {
+alert("Welcome, please let me know if you have any questions");
+}
+</script>
 </body>
 </html>
