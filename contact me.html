@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet " href = "style2.css">
+<meta charset = "utf-8">
+<title> Contact me </title>
+</head>
+<body>
+<h1 id="head"> Contact me </h1>
+<form name="myForm" style="margin-top: 90px; margin-right: 110px" onsubmit="return validateForm()" method="post">
+<label for="subject"> Subject* </label>
+<input type="text" id="subject" name="subject" style="width: 400px; height:25px"> <br><br>
+<label for="email" style="margin-left: 10px"> Email* </label>
+<input type="email" id="email" name="email" style="width: 400px; height:25px"> <br><br>
+<label for="id" style="margin-left:32px"> ID* </label>
+<input type="number" id="id" name="number" style="width: 400px; height:25px"> <br><br>
+<label for="url" style="margin-left: 20px"> URL* </label>
+<input type="url" id="url" name="url" style="width: 400px; height:25px"> <br><br>
+<label for = "textarea" style="position:relative; top:-70px; margin-left:2px"> Message* </label>
+<textarea id="textarea" name = "textarea" rows = "5" cols = "50" style="width:400px; margin-right: 2px"></textarea> <br><br>
+<input type="submit" id = "message" value="Submit">
+</form>
+<footer> @Copy Right 2020 </footer>
+<script src="jsfile.js">
+</script>
+</body>
+</html>

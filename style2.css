@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+}
+
+#head {
+	font-size: 15px;
+	background-color: black;
+	color: white;
+}
+
+footer {
+	color: white;
+	background-color: black;
+	font-size: 15px;
+}
+
+#message {
+	margin-bottom: 270px; 
+	margin-left: 50px; 
+	background-color:rgb(15,40,198); 
+	height:32px; 
+	width:80px;
+	color:white
+}
