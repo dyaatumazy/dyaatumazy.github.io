@@ -14,3 +14,15 @@ ul{ text-align:center;}
 li {
 	text-align:center;
 }
+
+ #button {
+     line-height: 12px;
+     width: 80px;
+     font-size: 8pt;
+     font-family: tahoma;
+     margin-top: 140px;
+     margin-right: 7px;
+     position:absolute;
+     top:0;
+     right:0;
+ }
