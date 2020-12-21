@@ -10,9 +10,9 @@
 	 if (x == "" || x == null){
 		a = 1;
 	}
-	
+	var format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 	var numbers = /^[0-9]+$/;
-	if ( document.forms["myForm"]["subject"].value.match(numbers) ) {
+	if ( (document.forms["myForm"]["subject"].value.match(numbers) || document.forms["myForm"]["subject"].value.match(format)) && document.forms["myForm"]["subject"].value != "") {
 		f = 1;
 	}
 			
@@ -32,7 +32,7 @@
 	 if (x == "" || x == null){
 	e = 1;
 	}
-	if ( document.forms["myForm"]["textarea"].value.match(numbers)) {
+	if ( (document.forms["myForm"]["textarea"].value.match(numbers) || document.forms["myForm"]["textarea"].value.match(format)) && document.forms["myForm"]["textarea"].value != "") {
 		g = 1;
 	}
 	if ( a == 1 && b == 1 && c == 0 && d == 0 && e == 0) {
@@ -123,10 +123,10 @@
 		alert ( " Subject field should contain a string " );
 	}
 	if ( f == 0 && g == 1 ) {
-		alert( " Message field should contain a string  " );
+		alert( " Message field should contain a string " );
 	}
 	if ( f == 1 && g == 1 ) {
-		alert ( " Subject and Message fields should contain a string " );
+		alert ( " Subject and Message fields should contain a a string " );
 	}
 	if ( b == 0 ) {
 	var domain = document.forms["myForm"]["email"].value.substring(document.forms["myForm"]["email"].value.lastIndexOf("@") +1);
