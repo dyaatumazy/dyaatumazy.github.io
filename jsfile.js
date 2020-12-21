@@ -120,13 +120,13 @@
 		alert(" Subject field must be filled ");
 	}
 	if ( f == 1 && g == 0 ) {
-		alert ( " Subject field should contain a string not a number " );
+		alert ( " Subject field should contain a string " );
 	}
 	if ( f == 0 && g == 1 ) {
-		alert( " Message field should contain a string not a number " );
+		alert( " Message field should contain a string  " );
 	}
 	if ( f == 1 && g == 1 ) {
-		alert ( " Subject and Message fields should contain a a string not a number " );
+		alert ( " Subject and Message fields should contain a string " );
 	}
 	if ( b == 0 ) {
 	var domain = document.forms["myForm"]["email"].value.substring(document.forms["myForm"]["email"].value.lastIndexOf("@") +1);
