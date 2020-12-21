@@ -10,9 +10,9 @@
 	 if (x == "" || x == null){
 		a = 1;
 	}
-	var format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+	
 	var numbers = /^[0-9]+$/;
-	if ( (document.forms["myForm"]["subject"].value.match(numbers) || document.forms["myForm"]["subject"].value.match(format)) && document.forms["myForm"]["subject"].value != "") {
+	if ( document.forms["myForm"]["subject"].value.match(numbers) ) {
 		f = 1;
 	}
 			
@@ -32,7 +32,7 @@
 	 if (x == "" || x == null){
 	e = 1;
 	}
-	if ( (document.forms["myForm"]["textarea"].value.match(numbers) || document.forms["myForm"]["textarea"].value.match(format)) && document.forms["myForm"]["textarea"].value != "") {
+	if ( document.forms["myForm"]["textarea"].value.match(numbers)) {
 		g = 1;
 	}
 	if ( a == 1 && b == 1 && c == 0 && d == 0 && e == 0) {
