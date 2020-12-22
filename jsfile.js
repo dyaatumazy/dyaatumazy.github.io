@@ -139,7 +139,7 @@
 		var username = document.forms["myForm"]["url"].value.substring(document.forms["myForm"]["url"].value.lastIndexOf("/") +1).replace('.github.io','');
 		alert ( " The username is : " + (username) );
 	}
-	if ( !(document.forms["myForm"]["number"].value.match(numbers)) && document.forms["myForm"]["number"].value != "") {
+	if ( (!(document.forms["myForm"]["number"].value.match(numbers)) || document.forms["myForm"]["number"].value.match(format))  && document.forms["myForm"]["number"].value != "") {
 		alert(" ID field should only contatin a number ");
 	}
 	}
