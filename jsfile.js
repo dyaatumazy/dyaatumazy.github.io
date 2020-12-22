@@ -10,9 +10,10 @@
 	 if (x == "" || x == null){
 		a = 1;
 	}
+		var format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 	var numbers = /^[0-9]+$/;
 			var xe = /\d/;
-	if ( document.forms["myForm"]["subject"].value.match(xe) ) {
+	if ( document.forms["myForm"]["subject"].value.match(xe) ||  document.forms["myForm"]["subject"].value.match(format) && document.forms["myForm"]["subject"].value != "") {
 		f = 1;
 	}
 	var x = document.forms["myForm"]["email"].value;
@@ -32,7 +33,7 @@
 	 if (x == "" || x == null){
 	e = 1;
 	}
-	if ( document.forms["myForm"]["textarea"].value.match(numbers)&& document.forms["myForm"]["textarea"].value != "") {
+	if ( document.forms["myForm"]["textarea"].value.match(numbers) ||  document.forms["myForm"]["textarea"].value.match(format) && document.forms["myForm"]["textarea"].value != "") {
 		g = 1;
 	}
 	if ( a == 1 && b == 1 && c == 0 && d == 0 && e == 0) {
@@ -120,13 +121,13 @@
 		alert(" Subject field must be filled ");
 	}
 	if ( f == 1 && g == 0 ) {
-		alert(" Subject field should have no numbers ");
+		alert(" Subject field should have no numbers and special charachters ");
 	}
 	if ( f == 1 && g == 1 ) {
-		alert( " Message field should contain a string and Subject field should have no numbers ");
+		alert( " Message field should contain a string and Subject field should have no numbers,both fields should have no special charachters ");
 	}
 	if ( f == 0 &&g == 1 ) {
-		alert( " Message field should contain a string " );
+		alert( " Message field should contain a string and without special charachters " );
 	}
 	
 	if ( b == 0 ) {
