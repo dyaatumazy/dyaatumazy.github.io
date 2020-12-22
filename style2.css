@@ -1,5 +1,9 @@
 body {
 	text-align: center;
+	
+}
+form {
+	text-align: center;
 }
 
 #head {
@@ -14,11 +18,19 @@ footer {
 	font-size: 15px;
 }
 
-#message {
+#click {
 	margin-bottom: 270px; 
 	margin-left: 50px; 
 	background-color:rgb(15,40,198); 
 	height:32px; 
 	width:80px;
 	color:white
+}
+
+input {
+	border: 2.2px solid rgb(120,220,204);
+}
+
+textarea {
+	border: 2.2px solid rgb(120,220,204);
 }
