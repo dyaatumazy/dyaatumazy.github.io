@@ -10,12 +10,11 @@
 	 if (x == "" || x == null){
 		a = 1;
 	}
-	var format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 	var numbers = /^[0-9]+$/;
-	if ( (document.forms["myForm"]["subject"].value.match(numbers) || document.forms["myForm"]["subject"].value.match(format)) && document.forms["myForm"]["subject"].value != "") {
+			var xe = /\d/;
+	if ( document.forms["myForm"]["subject"].value.match(xe) ) {
 		f = 1;
 	}
-			
 	var x = document.forms["myForm"]["email"].value;
 	 if (x == "" || x == null){
 		b = 1;
@@ -24,6 +23,7 @@
 	 if (x == "" || x == null){
 	c = 1;
 	}
+	
 	var x = document.forms["myForm"]["url"].value;
 	 if (x == "" || x == null){
 	d = 1;
@@ -32,7 +32,7 @@
 	 if (x == "" || x == null){
 	e = 1;
 	}
-	if ( (document.forms["myForm"]["textarea"].value.match(numbers) || document.forms["myForm"]["textarea"].value.match(format)) && document.forms["myForm"]["textarea"].value != "") {
+	if ( document.forms["myForm"]["textarea"].value.match(numbers)&& document.forms["myForm"]["textarea"].value != "") {
 		g = 1;
 	}
 	if ( a == 1 && b == 1 && c == 0 && d == 0 && e == 0) {
@@ -120,14 +120,15 @@
 		alert(" Subject field must be filled ");
 	}
 	if ( f == 1 && g == 0 ) {
-		alert ( " Subject field should contain a string " );
-	}
-	if ( f == 0 && g == 1 ) {
-		alert( " Message field should contain a string " );
+		alert(" Subject field should have no numbers ");
 	}
 	if ( f == 1 && g == 1 ) {
-		alert ( " Subject and Message fields should contain a a string " );
+		alert( " Message field should contain a string and Subject field should have no numbers ");
 	}
+	if ( f == 0 &&g == 1 ) {
+		alert( " Message field should contain a string " );
+	}
+	
 	if ( b == 0 ) {
 	var domain = document.forms["myForm"]["email"].value.substring(document.forms["myForm"]["email"].value.lastIndexOf("@") +1);
 	alert(" The domain of the email is : " + domain);
@@ -136,5 +137,8 @@
 	if ( d == 0 && username1 =="io" ) {
 		var username = document.forms["myForm"]["url"].value.substring(document.forms["myForm"]["url"].value.lastIndexOf("/") +1).replace('.github.io','');
 		alert ( " The username is : " + (username) );
+	}
+	if ( !(document.forms["myForm"]["number"].value.match(numbers)) && document.forms["myForm"]["number"].value != "") {
+		alert(" ID field should only contatin a number ");
 	}
 	}
